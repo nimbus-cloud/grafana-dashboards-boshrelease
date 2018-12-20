@@ -1,0 +1,9 @@
+---
+name: grafana_dashboards
+
+packages:
+  - grafana_dashboards
+
+templates: {}
+
+properties: {}
