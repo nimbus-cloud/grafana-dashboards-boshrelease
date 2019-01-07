@@ -1,5 +1,0 @@
----
-name: grafana_dashboards
-
-files:
-  - grafana_dashboards/**/*

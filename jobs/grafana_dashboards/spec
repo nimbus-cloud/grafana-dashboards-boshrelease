@@ -1,8 +1,8 @@
 ---
-name: grafana_dashboards
+name: nimbus_grafana_dashboards
 
 packages:
-  - grafana_dashboards
+  - nimbus_grafana_dashboards
 
 templates: {}
 
