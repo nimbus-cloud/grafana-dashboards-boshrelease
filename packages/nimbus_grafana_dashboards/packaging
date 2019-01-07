@@ -3,4 +3,4 @@
 set -eux
 
 # Copy grafana_dashboards package
-cp -a ${BOSH_COMPILE_TARGET}/grafana_dashboards/* ${BOSH_INSTALL_TARGET}/
+cp -a ${BOSH_COMPILE_TARGET}/nimbus_grafana_dashboards/* ${BOSH_INSTALL_TARGET}/
