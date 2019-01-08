@@ -249,7 +249,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "min(cf_application_instances{environment=~\"$environment\",deployment=~\"cf-diego\",application_id=~\"$cf_application_id\"})",
+          "expr": "min(cf_application_instances{environment=~\"$environment\",deployment=~\"cf\",application_id=~\"$cf_application_id\"})",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "Desired",
@@ -257,7 +257,7 @@
           "step": 10
         },
         {
-          "expr": "min(cf_application_instances_running{environment=~\"$environment\",deployment=~\"cf-diego\",application_id=~\"$cf_application_id\"})",
+          "expr": "min(cf_application_instances_running{environment=~\"$environment\",deployment=~\"cf\",application_id=~\"$cf_application_id\"})",
           "format": "time_series",
           "hide": false,
           "interval": "",
