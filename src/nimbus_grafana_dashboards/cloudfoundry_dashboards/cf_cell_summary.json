@@ -618,7 +618,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(avg(firehose_value_metric_rep_capacity_total_memory{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip)) - sum(avg(firehose_value_metric_rep_capacity_remaining_memory{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
+          "expr": "sum(avg(firehose_value_metric_rep_capacity_total_memory{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip)) - sum(avg(firehose_value_metric_rep_capacity_remaining_memory{environment=~\"$environment\",bosh_deployment=~\"cf\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -731,7 +731,7 @@
       ],
       "targets": [
         {
-          "expr": "min(firehose_container_metric_memory_bytes{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(application_id, instance_index) * on(application_id) group_left(organization_name, space_name, application_name) min(cf_application_info{environment=~\"$environment\",deployment=~\"$bosh_deployment\"}) by(organization_name, space_name, application_name,  application_id)",
+          "expr": "min(firehose_container_metric_memory_bytes{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(application_id, instance_index) * on(application_id) group_left(organization_name, space_name, application_name) min(cf_application_info{environment=~\"$environment\",deployment=~\"cf\"}) by(organization_name, space_name, application_name,  application_id)",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -788,7 +788,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(avg(firehose_value_metric_rep_capacity_total_disk{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip)) - sum(avg(firehose_value_metric_rep_capacity_remaining_disk{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
+          "expr": "sum(avg(firehose_value_metric_rep_capacity_total_disk{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip)) - sum(avg(firehose_value_metric_rep_capacity_remaining_disk{environment=~\"$environment\",bosh_deployment=~\"cf-diego\",bosh_job_name=~\"$bosh_job_name\", bosh_job_ip=~\"$bosh_job_ip\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "Allocated",
