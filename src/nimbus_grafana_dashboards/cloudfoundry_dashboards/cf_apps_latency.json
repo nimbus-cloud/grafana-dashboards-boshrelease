@@ -200,7 +200,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(firehose_http_start_stop_client_request_duration_seconds{environment=~\"$environment\",bosh_deployment=~\"$environment\",application_id=~\"$cf_application_id\"}) by(quantile)",
+          "expr": "avg(firehose_http_start_stop_client_request_duration_seconds{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",application_id=~\"$cf_application_id\"}) by(quantile)",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "{{ quantile }}",
@@ -289,7 +289,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(firehose_http_start_stop_server_request_duration_seconds{environment=~\"$environment\",bosh_deployment=~\"$environment\",application_id=~\"$cf_application_id\"}) by(quantile)",
+          "expr": "avg(firehose_http_start_stop_server_request_duration_seconds{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\",application_id=~\"$cf_application_id\"}) by(quantile)",
           "intervalFactor": 2,
           "legendFormat": "{{ quantile }}",
           "refId": "A",
