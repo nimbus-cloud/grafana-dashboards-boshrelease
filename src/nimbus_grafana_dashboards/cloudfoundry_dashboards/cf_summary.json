@@ -141,7 +141,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "avg(firehose_value_metric_cc_total_users{environment=~\"$environment\",bosh_deployment=~\"$environment\"})",
+          "expr": "avg(firehose_value_metric_cc_total_users{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\"})",
           "intervalFactor": 2,
           "refId": "A",
           "step": 60
@@ -201,7 +201,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(firehose_value_metric_cc_total_users{environment=~\"$environment\",bosh_deployment=~\"$environment\"})",
+          "expr": "avg(firehose_value_metric_cc_total_users{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\"})",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "Number of Users",
@@ -1169,7 +1169,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(avg(cf_service_binding_info{environment=~\"$environment\",deployment=~\"$environment\"}) without(instance))",
+          "expr": "sum(avg(cf_service_binding_info{environment=~\"$environment\",deployment=~\"$bosh_deployment\"}) without(instance))",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "",
@@ -1233,7 +1233,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(avg(cf_service_binding_info{environment=~\"$environment\",deployment=~\"$environment\"}) without(instance))",
+          "expr": "sum(avg(cf_service_binding_info{environment=~\"$environment\",deployment=~\"$bosh_deployment\"}) without(instance))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
