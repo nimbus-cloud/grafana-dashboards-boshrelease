@@ -1210,7 +1210,7 @@
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": "Director",
         "multi": false,
         "name": "bosh_director",
