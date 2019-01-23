@@ -101,6 +101,69 @@
           "align": false,
           "alignLevel": null
         }
+      },
+      {
+        "type": "grafana-piechart-panel",
+        "title": "API requests",
+        "gridPos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 9
+        },
+        "id": 4,
+        "datasource": null,
+        "targets": [
+          {
+            "expr": "sum(firehose_value_metric_cc_http_status_2_xx)",
+            "intervalFactor": 1,
+            "format": "time_series",
+            "refId": "A",
+            "legendFormat": "2XXs"
+          },
+          {
+            "refId": "B",
+            "expr": "sum(firehose_value_metric_cc_http_status_3_xx)",
+            "intervalFactor": 1,
+            "format": "time_series",
+            "legendFormat": "3XXs"
+          },
+          {
+            "refId": "C",
+            "expr": "sum(firehose_value_metric_cc_http_status_4_xx)",
+            "intervalFactor": 1,
+            "format": "time_series",
+            "legendFormat": "4XXs"
+          },
+          {
+            "refId": "D",
+            "expr": "sum(firehose_value_metric_cc_http_status_5_xx)",
+            "intervalFactor": 1,
+            "format": "time_series",
+            "legendFormat": "5XXs"
+          }
+        ],
+        "pieType": "pie",
+        "legend": {
+          "show": true,
+          "values": true
+        },
+        "links": [],
+        "maxDataPoints": 3,
+        "interval": null,
+        "cacheTimeout": null,
+        "nullPointMode": "connected",
+        "legendType": "Under graph",
+        "breakPoint": "50%",
+        "aliasColors": {},
+        "format": "short",
+        "valueName": "current",
+        "strokeWidth": 1,
+        "fontSize": "80%",
+        "combine": {
+          "threshold": 0,
+          "label": "Others"
+        }
       }
     ],
     "schemaVersion": 16,
