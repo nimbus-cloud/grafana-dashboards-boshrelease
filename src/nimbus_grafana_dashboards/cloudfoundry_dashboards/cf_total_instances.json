@@ -16,7 +16,20 @@
     "gnetId": null,
     "graphTooltip": 0,
     "id": null,
-    "links": [],
+    "links": [
+        {
+          "asDropdown": true,
+          "icon": "external link",
+          "includeVars": true,
+          "keepTime": true,
+          "tags": [
+            "cf"
+          ],
+          "targetBlank": false,
+          "title": "CF",
+          "type": "dashboards"
+        }
+    ],
     "panels": [
       {
         "aliasColors": {},
@@ -202,7 +215,7 @@
       ]
     },
     "timezone": "",
-    "title": "CF - Instances",
+    "title": "Instances and API",
     "uid": null,
     "version": 0
   }
