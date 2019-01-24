@@ -181,7 +181,9 @@
     ],
     "schemaVersion": 16,
     "style": "dark",
-    "tags": [],
+    "tags": [
+        "cf"
+    ],
     "templating": {
       "list": []
     },
@@ -215,7 +217,7 @@
       ]
     },
     "timezone": "",
-    "title": "Instances and API",
+    "title": "CF: Instances and API",
     "uid": null,
     "version": 0
   }
