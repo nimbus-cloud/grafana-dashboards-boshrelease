@@ -1893,7 +1893,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "max(rate(firehose_value_metric_cc_http_status_5_xx{environment=~\"$environment\",bosh_deployment=~\"cf-diego\"}[5m]))",
+          "expr": "max(rate(firehose_value_metric_cc_http_status_5_xx{environment=~\"$environment\",bosh_deployment=~\"cf\"}[5m]))",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "5xx resp/sec",
