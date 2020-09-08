@@ -759,7 +759,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "avg(firehose_value_metric_gorouter_total_routes{environment=~\"$environment\",bosh_deployment=~\"cf-diego\"})",
+          "expr": "avg(firehose_value_metric_gorouter_total_routes{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\"})",
           "intervalFactor": 2,
           "legendFormat": "Routes",
           "metric": "firehose_value_metric_gorouter_total_routes",
@@ -843,7 +843,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(avg(firehose_value_metric_uaa_audit_service_user_authentication_failure_count{environment=~\"$environment\",bosh_deployment=~\"cf-diego\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
+          "expr": "sum(avg(firehose_value_metric_uaa_audit_service_user_authentication_failure_count{environment=~\"$environment\",bosh_deployment=~\"$bosh_deployment\"}) by(bosh_deployment, bosh_job_name, bosh_job_ip))",
           "intervalFactor": 2,
           "refId": "A",
           "step": 60
