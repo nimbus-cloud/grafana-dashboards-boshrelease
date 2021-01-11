@@ -1610,3 +1610,4 @@
   "title": "MongoDB",
   "version": 40,
   "description": "Note for a official Grafana MongoDB plugin, please view:\nhttps://grafana.com/grafana/plugins/grafana-mongodb-datasource\n\nThis is a MongoDB Prometheus Exporter Dashboard. \nWorks well with https://github.com/dcu/mongodb_exporter\n\nIf you have the node_exporter running on the mongo instance, you will also get some useful alert panels related to disk io and cpu."
+}
