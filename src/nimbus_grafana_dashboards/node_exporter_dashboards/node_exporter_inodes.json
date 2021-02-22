@@ -143,14 +143,14 @@
         }
       ],
       "title": "Free inodes:$maxmount ",
-      "type": "stat"
+      "type": "bargauge"
     },
     {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 1,
       "description": "Number of inodes still available on system",
       "fieldConfig": {
